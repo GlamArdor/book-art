@@ -74,6 +74,6 @@ pip install -r requirements.txt
 
 ## Лицензия
 
-Код – MIT, см. [LICENSE](LICENSE).
+Copyright (C) 2026 Glam_Ardor. Код распространяется по [GNU GPL версии 3](LICENSE) или любой более поздней: переделки можно выпускать, но с сохранением авторства, пометкой об изменениях и открытым кодом под той же лицензией.
 
 `fontdata.json` содержит глифы Брайля из [GNU Unifont](https://unifoundry.com/unifont/) (SIL OFL 1.1 / GPL-2.0-or-later с исключением для шрифтов) и шесть блочных глифов из `ascii.png` Minecraft. Иконка – текстура книги и пера из Minecraft. Minecraft – товарный знак Mojang; проект с Mojang не связан.
