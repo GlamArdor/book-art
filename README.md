@@ -29,7 +29,7 @@ Minecraft 16×16 items as coloured blocks – apple, golden apple, golden helmet
 
 ![Minecraft items on a book page](docs/items.png)
 
-Ready-to-paste texts are in [`examples-text`](examples-text), including the coat of arms from the first picture.
+Ready-to-paste texts are in [`examples-text`](examples-text), including the coat of arms from the first picture ([`silverheim-coat-of-arms.txt`](examples-text/silverheim-coat-of-arms.txt)).
 
 ## Installation
 
@@ -39,12 +39,12 @@ Requires Python 3.10 or newer.
 pip install -r requirements.txt
 ```
 
-Run `BookArt.bat` (you can also drop a picture onto it) or `pythonw book_art.py`. The interface is in Russian.
+Run `BookArt.bat` (you can also drop a picture onto it) or `pythonw book_art.py`. The interface is in English or Russian: it starts in Russian on a Russian Windows and in English everywhere else, and the language can be switched at the top of the window.
 
 ## Pasting into a book
 
 1. Open a book and quill.
-2. Align left. If "Строки одной ширины" (equal-width lines) is ticked in the program, centred works too.
+2. Align left. If "Equal-width lines" is ticked in the program, centred works too.
 3. Press Ctrl+V.
 
 Colours are written as `§` codes, and the vanilla book editor strips them. Coloured pictures need an editor that understands them, for example [Roleplayer's Quill](https://codeberg.org/Glam_Ardor/roleplayers-quill): its multi-line paste keeps the codes as they are. Black-and-white Braille has no codes.
