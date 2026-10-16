@@ -1,0 +1,16 @@
+# Only the program, its data and the chosen examples are published.
+/*
+!/.gitignore
+!/README.md
+!/LICENSE
+!/requirements.txt
+!/BookArt.bat
+!/book_art.py
+!/fontdata.json
+!/book_and_quill.ico
+!/docs/
+!/examples-text/
+!/pixelart/
+/pixelart/pixelart_sheet.png
+/pixelart/out/*.png
+__pycache__/

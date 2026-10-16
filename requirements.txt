@@ -1,0 +1,2 @@
+Pillow>=10
+windnd>=1.0.7
