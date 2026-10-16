@@ -1,79 +1,79 @@
-# Картинка в книгу
+# Book Art
 
-Программа превращает картинку в текст, который рисует её на странице книги Minecraft. Кидаете PNG в окно, подкручиваете ползунки, нажимаете «Скопировать для книги» и вставляете в книгу.
+Turns a picture into text that draws it on a Minecraft book page. Drop a PNG into the window, adjust the sliders, press "Copy for the book" and paste it into a book.
 
-Сделано под Minecraft 1.21.8: ширина каждого знака взята из шрифта самой игры, поэтому превью в окне показывает страницу так, как её нарисует игра.
+Made for Minecraft 1.21.8: the width of every character is taken from the game's own font, so the preview in the window shows the page exactly as the game will draw it.
 
-![Герб из картинки в книгу цветными точками Брайля](docs/arms.png)
+![A coat of arms turned into coloured Braille dots on a book page](docs/arms.png)
 
-## Что умеет
+## Features
 
-- **Цветные блоки** – сетка до 12×14 клеток из `█ ▀ ▄ ▐` в 16 цветах книги. Лучше всего для пиксель-арта и иконок.
-- **Точки Брайля** – до 74×56 точек, чёрно-белые или цветные. Разрешение выше, подходит для гербов, силуэтов и рисунков с крупными цветными пятнами.
-- Пиксель-арт до 24×28 пикселей переносится пиксель в пиксель, без растягивания.
-- Яркость, контраст, насыщенность, порог точек, удаление фона по цвету углов, дизеринг.
-- Счётчик знаков: страница вмещает 1024.
-- Картинку можно перетащить прямо в окно.
+- **Coloured blocks** – a grid of up to 12×14 cells made of `█ ▀ ▄ ▐` in the book's 16 colours. Best for pixel art and icons.
+- **Braille dots** – up to 74×56 dots, black-and-white or coloured. Higher resolution, good for coats of arms, silhouettes and pictures with large patches of colour.
+- Pixel art up to 24×28 pixels is transferred pixel for pixel, with no stretching.
+- Brightness, contrast, saturation, dot threshold, background removal by the corner colour, dithering.
+- Character counter: a page holds 1024.
+- Pictures can be dragged straight into the window.
 
-## Примеры
+## Examples
 
-Пиксель-арты, нарисованные только цветами книги (лежат в [`pixelart`](pixelart), готовые тексты для вставки – в [`pixelart/out`](pixelart/out)):
+Pixel art drawn only in the book's colours (in [`pixelart`](pixelart), ready-to-paste texts in [`pixelart/out`](pixelart/out)):
 
-![Пиксель-арты цветами книги](docs/pixel-art.png)
+![Pixel art in the book's colours](docs/pixel-art.png)
 
-| Роза | Корона | Меч |
+| Rose | Crown | Sword |
 |---|---|---|
 | ![](docs/rose.png) | ![](docs/crown.png) | ![](docs/sword.png) |
 
-Предметы Minecraft 16×16 цветными блоками – яблоко, золотое яблоко, золотой шлем и мак:
+Minecraft 16×16 items as coloured blocks – apple, golden apple, golden helmet and poppy:
 
-![Предметы Minecraft на странице книги](docs/items.png)
+![Minecraft items on a book page](docs/items.png)
 
-Тексты для вставки – в [`examples-text`](examples-text). Текст герба из первой картинки – [`examples-text/Герб Сильверхеймов.txt`](examples-text/Герб%20Сильверхеймов.txt).
+Ready-to-paste texts are in [`examples-text`](examples-text), including the coat of arms from the first picture.
 
-## Установка
+## Installation
 
-Нужен Python 3.10 или новее.
+Requires Python 3.10 or newer.
 
 ```
 pip install -r requirements.txt
 ```
 
-Запуск – `BookArt.bat` (картинку можно бросить и на него) или `pythonw book_art.py`.
+Run `BookArt.bat` (you can also drop a picture onto it) or `pythonw book_art.py`. The interface is in Russian.
 
-## Как вставить в книгу
+## Pasting into a book
 
-1. Откройте книгу и перо.
-2. Выравнивание по левому краю. Если в программе стоит галочка «Строки одной ширины», можно и по центру.
-3. Ctrl+V.
+1. Open a book and quill.
+2. Align left. If "Строки одной ширины" (equal-width lines) is ticked in the program, centred works too.
+3. Press Ctrl+V.
 
-Цвета записываются кодами `§`, а обычный редактор книги их вырезает. Для цветных картинок нужен редактор, который их понимает, например [Roleplayer's Quill](https://codeberg.org/Glam_Ardor/roleplayers-quill): многострочная вставка в нём переносит коды как есть. Чёрно-белый Брайль кодов не содержит.
+Colours are written as `§` codes, and the vanilla book editor strips them. Coloured pictures need an editor that understands them, for example [Roleplayer's Quill](https://codeberg.org/Glam_Ardor/roleplayers-quill): its multi-line paste keeps the codes as they are. Black-and-white Braille has no codes.
 
-## Что получится, а что нет
+## What works and what doesn't
 
-Хорошо выходит:
-- пиксель-арт и иконки 16×16–24×28;
-- 2–4 ярких цвета: красный, золотой, жёлтый, зелёный, голубой, синий, фиолетовый, чёрный;
-- простой силуэт на однотонном или прозрачном фоне.
+Works well:
+- pixel art and icons from 16×16 to 24×28;
+- 2–4 bright colours: red, gold, yellow, green, aqua, blue, purple, black;
+- a simple silhouette on a plain or transparent background.
 
-Плохо выходит:
-- фотографии и мелкие детали;
-- коричневые, бежевые и пастельные тона – таких цветов в книге нет, они становятся серыми или красными;
-- белое и светлое – сливается с бумагой.
+Works badly:
+- photos and fine detail;
+- brown, beige and pastel tones – the book has no such colours, so they turn grey or red;
+- white and light colours – they blend into the paper.
 
-## Как это устроено
+## How it works
 
-Ширины знаков сняты с кода и ассетов 1.21.8:
+Character widths are taken from the 1.21.8 code and assets:
 
-- `█ ▀ ▄ ▐ ▒ ▓` берутся из `ascii.png` и сдвигают строку на 9 px. Пустой `U+3000` приходит из Unifont и сдвигает тоже на 9, поэтому клетки цветного режима стоят ровно.
-- Знаки Unifont занимают `(ширина закрашенной части) / 2 + 1` px и рисуются от своего левого закрашенного столбца. Поэтому `▖ ▗` и другие частичные блоки сжимаются и съезжают и для картинок не годятся.
-- Брайль занимает 3 px. Пустая клетка Брайля в Unifont 16 рисует мелкие точки, поэтому пустые места набираются `U+2007` (5 px), `U+3000` (9 px) и пробелом (4 px).
-- Игра переносит строку только на пробеле, а страница шириной 114 px, так что ни одна строка картинки за край не выходит.
+- `█ ▀ ▄ ▐ ▒ ▓` come from `ascii.png` and advance the line by 9 px. The empty `U+3000` comes from Unifont and also advances by 9, so the cells of the colour mode line up exactly.
+- Unifont characters advance by `(width of the drawn part) / 2 + 1` px and are drawn from their leftmost filled column. That is why `▖ ▗` and other partial blocks shrink and shift, and are useless for pictures.
+- Braille advances by 3 px. An empty Braille cell in Unifont 16 draws tiny dots, so empty space is filled with `U+2007` (5 px), `U+3000` (9 px) and spaces (4 px).
+- The game only wraps a line at a space, and the page is 114 px wide, so no line of a picture ever goes past the edge.
 
-Отсюда и разница со старыми конвертерами под 1.14: там Брайль рисовался другим шрифтом.
+This is also the difference from the older converters made for 1.14: Braille was drawn by a different font back then.
 
-## Лицензия
+## License
 
-Copyright (C) 2026 Glam_Ardor. Код распространяется по [GNU GPL версии 3](LICENSE) или любой более поздней: переделки можно выпускать, но с сохранением авторства, пометкой об изменениях и открытым кодом под той же лицензией.
+Copyright (C) 2026 Glam_Ardor. The code is licensed under the [GNU GPL version 3](LICENSE) or any later version: modified versions may be released, but they must keep the authorship, mark the changes and stay open source under the same license.
 
-`fontdata.json` содержит глифы Брайля из [GNU Unifont](https://unifoundry.com/unifont/) (SIL OFL 1.1 / GPL-2.0-or-later с исключением для шрифтов) и шесть блочных глифов из `ascii.png` Minecraft. Иконка – текстура книги и пера из Minecraft. Minecraft – товарный знак Mojang; проект с Mojang не связан.
+`fontdata.json` contains Braille glyphs from [GNU Unifont](https://unifoundry.com/unifont/) (SIL OFL 1.1 / GPL-2.0-or-later with the font embedding exception) and six block glyphs from Minecraft's `ascii.png`. The icon is Minecraft's book and quill texture. Minecraft is a trademark of Mojang; this project is not affiliated with Mojang.
